@@ -1,75 +1,206 @@
-# React + TypeScript + Vite
+# Lumora AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lumora AI is a modern AI automation SaaS interface designed for service-based businesses that want to manage customer conversations, leads, bookings, AI flows, voice AI, integrations, and business settings from one centralized dashboard.
 
-Currently, two official plugins are available:
+The project includes a public marketing landing page, authentication screens, legal pages, and a multi-section admin dashboard built with React, TypeScript, Vite, Tailwind CSS, shadcn-style UI components, Framer Motion, and React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Overview
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Lumora AI is built as a frontend SaaS platform for an AI agency model. The main idea is that each business/client can access its own dashboard and, depending on the selected plan, enable different automation modules such as:
 
-Note: This will impact Vite dev & build performances.
+- AI-powered conversations
+- Voice AI
+- Booking management
+- Lead tracking
+- Analytics
+- AI activity monitoring
+- Automation flows
+- Message templates
+- Channel configuration
+- Webhooks
+- Integrations
+- API keys
+- Business settings
+- Team management
+- Billing
+- Security settings
+- Notifications
+- Appearance and language preferences
 
-## Expanding the ESLint configuration
+This version focuses on the frontend experience, UI structure, routing, and mock data representation for the future backend, database, and AI integrations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **shadcn-style components**
+- **Radix UI**
+- **Framer Motion**
+- **Lucide React**
+- **React Router**
+- **ESLint**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Main Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Public Website
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The public side of Lumora includes a marketing-oriented landing page with sections for:
+
+- Hero section
+- Features
+- Chat demo
+- How it works
+- Industries
+- Pricing
+- Social proof
+- Final call to action
+
+It also includes public pages such as:
+
+- Contact
+- Login
+- Register
+- Forgot Password
+- Privacy Policy
+- Terms of Service
+- Security
+
+---
+
+### Admin Dashboard
+
+The dashboard is designed as the control center for each business/client.
+
+Current dashboard modules include:
+
+- Main dashboard overview
+- Conversations
+- Voice AI
+- Bookings
+- Leads
+- Analytics
+- AI Activity
+- Flows
+- Templates
+- Channels
+- Webhooks
+- Integrations
+- API Keys
+- Business settings
+- Team
+- Billing
+- Security
+- Notifications
+- Appearance
+- Language
+
+---
+
+### AI Activity Center
+
+The main dashboard includes an AI activity section that displays recent AI actions such as:
+
+- AI responses
+- Booking activity
+- Lead generation
+- Voice AI activity
+- Follow-ups
+- Escalations
+- Quotes
+
+This helps visualize how the AI assistant is operating across enabled channels.
+
+---
+
+### Intelligent Conversations
+
+The dashboard includes a conversation preview system with AI insights such as:
+
+- Customer intent
+- Urgency level
+- Sentiment
+- Lead score
+- AI-generated summary
+
+This is intended to help business owners quickly understand the status and value of each customer conversation.
+
+---
+
+### Bookings and Leads
+
+Lumora includes UI sections for tracking upcoming bookings, lead information, customer activity, and business opportunities generated through AI-powered interactions.
+
+---
+
+### AI Flows
+
+The platform includes an automation flow section designed to represent AI workflows, usage, conversion rates, and automation performance.
+
+---
+
+### Multi-Channel Structure
+
+Lumora is structured to support different communication channels such as:
+
+- WhatsApp
+- SMS
+- Web Chat
+- Email
+- Voice AI
+
+Each channel can be configured and connected depending on the business needs and plan.
+
+---
+
+## Project Structure
+
+```bash
+src/
+├── admin/
+│   ├── components/
+│   ├── data/
+│   │   └── mock/
+│   ├── layouts/
+│   ├── pages/
+│   │   ├── channel-pages/
+│   │   ├── config-pages/
+│   │   ├── integration-pages/
+│   │   ├── intelligence-pages/
+│   │   └── main-pages/
+│   └── types/
+│
+├── components/
+│   └── ui/
+│
+├── lib/
+│
+├── principal/
+│   ├── components/
+│   ├── layouts/
+│   └── pages/
+│       ├── contact/
+│       ├── forgot-password/
+│       ├── home/
+│       ├── login/
+│       ├── privacy/
+│       ├── register/
+│       ├── security/
+│       └── terms/
+│
+├── router/
+│   ├── routes/
+│   └── app.router.tsx
+│
+├── shared/
+├── utils/
+├── AgencyApp.tsx
+├── index.css
+└── main.tsx
